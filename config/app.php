@@ -195,6 +195,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Custom service providers
+        App\Providers\StudentProvider::class,
     ],
 
     /*
@@ -209,6 +211,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'StudentFacades' => App\Domain\Facades\StudentFacades::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
